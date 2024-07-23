@@ -54,6 +54,12 @@ sudo rm -rf /var/www/html
 sudo git clone <github_repository_url> /var/www/html
 ```
 
+give the permission to the jenkins user:
+
+sudo visudo     (add below line in editor)
+
+jenkins ALL=(ALL) NOPASSWD: /usr/bin/apt
+
 Click on Save to save the job configuration and Trigger the Jenkins Job.
 
 Access the Deployed Website (e.g., http://<aws_public_ip_address:8080>)
